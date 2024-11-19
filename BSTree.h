@@ -76,9 +76,9 @@ class BSTree {
 		if(n == nullptr){
 			throw std::runtime_error("Elemento no encontrado en el árbol");
 		}
-		if (e > n->elem) {
+		if (e < n->elem) {
 			return search(n->left, e);
-		}else if (e< n->elem){
+		}else if (e> n->elem){
 			return search(n->right, e);
 		}else{
 			return n;
@@ -90,7 +90,7 @@ class BSTree {
 	BSNode<T>* BSTree<T>::insert(BSNode<T>* n, T e){
 		if(n == nullptr){
 			//Si el puntero es nulo, es que has llegado a donde hay que insertarlo
-			nelem + 1;
+			++nelem;
 			return new BSNode<T>(e);
 
                 }
