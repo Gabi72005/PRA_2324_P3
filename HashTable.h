@@ -5,7 +5,9 @@
 #include <stdexcept>
 #include "Dict.h"
 #include "TableEntry.h"
-#include "./P1/ListLinked.h"
+#include "/home/gabriel/Desktop/UPV/pra/practicas/practica1/PRA_2324_P1/ListLinked.h"
+
+
 
 template <typename V>
 class HashTable : public Dict<V> {
