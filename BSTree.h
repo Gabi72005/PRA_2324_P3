@@ -25,7 +25,7 @@ class BSTree {
     public:
        //Métodos públicos
        //Constructor
-       BSTree() : root(nullptr), nelem(0) {}
+       BSTree() : nelem(0), root(nullptr) {}
 
        //Destructor
        ~BSTree(){
