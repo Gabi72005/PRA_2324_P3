@@ -16,6 +16,16 @@ bin/testHashTable: testHashTable.cpp HashTable.h Dict.h TableEntry.h
 	mkdir -p bin
 	g++ -Wall -std=c++17 -o bin/testHashTable testHashTable.cpp
 
+# REgla para testBSTreeDict
+bin/testBSTreeDict: Dict.h BSTreeDict.h BSNode.h TableEntry.h testBSTreeDict.cpp
+	mkdir -p bin
+	g++ -Wall -std=c++17 -o bin/testBSTreeDict testBSTreeDict.cpp
+
+
+
+
+
+
 # Regla para limpiar
 clean:
 	rm -rf bin *.o *.gch    

@@ -19,12 +19,12 @@ class BSTreeDict: public Dict<V> {
 		tree->insert(TableEntry<V>(key, value));
 	}
 
-	V search(std::string key) override{
-		return tree->search(TableEntry<V>(key));
+	V search(std::string key) override {
+		return tree->search(TableEntry<V>(key)).value;
 	}
 
-	V remove(std::string key) override{
-		TableEntry<V> entry = search(TableEntry<V>(key));
+	V remove(std::string key) override {
+		TableEntry<V> entry = tree->search(TableEntry<V>(key));
 		tree->remove(entry);
 		return entry.value;
 	}
@@ -46,7 +46,7 @@ class BSTreeDict: public Dict<V> {
 	}
 
 	// Sobrecarga <<
-	friend std::ostream& operator<<(std::ostream out, const BSTreeDict<V>& bs){
+	friend std::ostream& operator<<(std::ostream& out, const BSTreeDict<V>& bs){
 		out << *(bs.tree);
 		return out;
 	}
